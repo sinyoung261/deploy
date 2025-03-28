@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class mainController {
 	
-	@Value("{file.upload}")
+	@Value("${file.upload}")
 	String upload;
 	
 	@GetMapping("/")
 	@ResponseBody
 	public String main() {
-		return "hello :" + upload;
+		return "every hello :" + upload;
 	}
 }
